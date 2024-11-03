@@ -54,7 +54,7 @@ const options = [
     ["120°", "90°", "360°", "180°"]
 ];
 
-const answerKeys = [1, 1, 3, 3, 3, 1, 2, 0, 3, 2, 3, 2, 1, 1, 1, 3, 1, 2, 1, 1, 2, 2, 2, 3];
+const answerKeys = [1, 1, 3, 3, 3, 1, 2, 0, 3, 2, 3, 2, 1, 1, 1, 3, 1, 2, 1, 1, 2, 2, 2, 3, 3];
 
 export { questions };
 export { options };
