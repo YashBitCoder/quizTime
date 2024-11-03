@@ -68,7 +68,7 @@ function update() {
             const spanEl = document.createElement("span");
             spanEl.classList.add("choice");
 
-            if(idx !== answerKeys[quizData.cnt]) spanEl.innerHTML = `You Chose <img src="images/wrong.svg" alt="wrong">`
+            if(idx !== answerKeys[quizData.cnt]) spanEl.innerHTML = `<img src="images/wrong.svg" alt="wrong">`
             else spanEl.innerHTML = `<img src="images/right.svg" alt="right">`
             op.append(spanEl);
         })
