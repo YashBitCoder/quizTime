@@ -3,7 +3,7 @@ import { questions, options, answerKeys } from "./quizzes.js";
 const container = document.querySelector(".container");
 const startCont = document.querySelector(".base-start");
 const startBtn = document.querySelector(".start");
-const nextBtn = document.querySelector(".next span");
+// const nextBtn = document.querySelector(".next span");
 const retryBtn = document.querySelector(".retry");
 const quizStarter = document.querySelector(".quiz-container");
 const resultCont = document.querySelector(".result-container");
@@ -108,7 +108,8 @@ function setTimer() {
         }
 
         container.style.backgroundColor = bg;
-        timer.style.backgroundColor = nextBtn.style.color = tBg;
+        // timer.style.backgroundColor = nextBtn.style.color = tBg;
+        timer.style.backgroundColor = tBg;
 
         if(remTime <= 0) {
             optionsList[answerKeys[quizData.cnt]].classList.add("right-bd");
@@ -144,9 +145,9 @@ function nextQuiz() {
         rightPer.innerText = `${rPer}%`;
         wrongPer.innerText = `${wPer}%`;
 
-        progress.style.width = rPer;
+        progress.style.width = `${rPer}%`;
 
-        if(quizData.highest === null || quizData.highest < quizData.currScore) quizData.highest = quizData.currScore;
+        if(quizData.highest != null && quizData.currScore !== 0 && quizData.currScore > quizData.highest) quizData.highest = quizData.currScore;
 
         bgMusic.pause();
         updateLS();
@@ -216,7 +217,7 @@ startBtn.addEventListener("click", () => {
     setTimer();
 })
 
-nextBtn.addEventListener("click", nextQuiz);
+// nextBtn.addEventListener("click", nextQuiz);
 retryBtn.addEventListener("click", () => {
     quizData.currScore = quizData.solved = quizData.cnt = null;
     resultCont.classList.remove("show");
@@ -240,6 +241,6 @@ capRes.addEventListener("click", () => {
     html2canvas(document.querySelector(".main-res")).then(canvas => {
         let imgData = canvas.toDataURL("image/png");
         let newWin = window.open();
-        newWin.document.write(`<img src="${imgData}" alt="cap-img">`);
+        newWin.document.write(`<div style="text-align: center;"><img src="${imgData}" alt="cap-img"></div>`);
     });
 });
