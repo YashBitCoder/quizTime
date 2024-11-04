@@ -1,4 +1,7 @@
 const questions = [
+    "Sabse bada ghada bewkoof kon hai?",
+    "Bhandare ka naam sunke kon pagle ho jata hai",
+    "Pitne ka maamle me kon nuksaan ke rheta hai",
     "What is the capital of France?" ,
     "Which planet is known as the Red Planet?",
     "Who wrote 'Hamlet'?",
@@ -27,6 +30,9 @@ const questions = [
 ];
 
 const options = [
+    ["Khushi Khatam", "Anshu Bavli", "King Yash", "Radha Radhodi"],
+    ["Baabdi", "Buchi", "Bhanota Sur", "Kato"],
+    ["Bhanota Sur", "Baabdi", "Buchi", "Kato"],
     ["Berlin", "Paris", "Lisbon", "Madrid"],
     ["Venus", "Mars", "Jupiter", "Earth"],
     ["Mark Twain", "Charles Dickens", "Jane Austen", "William Shakespeare"],
@@ -54,7 +60,7 @@ const options = [
     ["120°", "90°", "360°", "180°"]
 ];
 
-const answerKeys = [1, 1, 3, 3, 3, 1, 2, 0, 3, 2, 3, 2, 1, 1, 1, 3, 1, 2, 1, 1, 2, 2, 2, 3, 3];
+const answerKeys = [3, 2, 0, 1, 1, 3, 3, 3, 1, 2, 0, 3, 2, 3, 2, 1, 1, 1, 3, 1, 2, 1, 1, 2, 2, 2, 3, 3];
 
 export { questions };
 export { options };
