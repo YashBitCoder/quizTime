@@ -54,7 +54,7 @@ if(quizData.cnt !== null) {
     nextQuiz();
 }
 
-if(quizData.highest) highestLabel.innerText = `Highest Score: ${quizData.highest}`;
+if(quizData.highest != null) highestLabel.innerText = `Highest Score: ${quizData.highest}`;
 
 function update() {
     if(quizData.cnt < questions.length) {
@@ -224,7 +224,7 @@ retryBtn.addEventListener("click", () => {
     startCont.classList.add("show");
 
     bgMusic.currentTime = 0;
-    highestLabel.innerText = `Highest Score: ${quizData.highest}`;
+    if(quizData.highest) highestLabel.innerText = `Highest Score: ${quizData.highest}`;
     container.style.backgroundColor = "#f6f4f0";
     updateLS();
 });
