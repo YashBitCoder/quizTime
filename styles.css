@@ -169,7 +169,7 @@ body {
     margin-top: 0.9rem;
 }
 
-.next {
+/* .next {
     align-self: end;
 }
 
@@ -178,7 +178,7 @@ body {
     color: rgb(15, 181, 15);
     font-weight: 600;
     cursor: pointer;
-}
+} */
 
 .animate-wrong {
     animation: jiggle 0.5s ease 1 alternate;
